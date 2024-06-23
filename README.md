@@ -13,14 +13,14 @@ There's no usable events, nor any user-facing commands that you can use.
 2. Add `ensure bo-notifications` anywhere to your server.cfg, preferably at the start.
 3. Edit any script that uses any notification service (QB, ESX) and replace any mention of a notify event with this:
 
-Server: `TriggerClientEvent('bo-notifications:notify', "NOTIFICATION TYPE, "NOTIFICATION TEXT", "SOUND" )`
-Client: `TriggerEvent('bo-notifications:notify', "NOTIFICATION TYPE, "NOTIFICATION TEXT", "SOUND" )`
+- Server: `TriggerClientEvent('bo-notifications:notify', "NOTIFICATION TYPE, "NOTIFICATION TEXT", "SOUND" )`
+- Client: `TriggerEvent('bo-notifications:notify', "NOTIFICATION TYPE, "NOTIFICATION TEXT", "SOUND" )`
 
 ### Supported notification types:
-`warn` - Is yellow, used for warning the player about e.g dangers, 
-`info` - Used for informing the player about useful info.
-`success` - Is green, signifies success of a task
-`failure` - Is red, signifies failure of a task
+- `warn` - Is yellow, used for warning the player about e.g dangers, 
+- `info` - Used for informing the player about useful info.
+- `success` - Is green, signifies success of a task
+- `failure` - Is red, signifies failure of a task
 
 
 # Adding sounds:
