@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('message', (event) => {
     if (event.data.type === 'warn') {
-        showNotification("#ffff00", "WARNING", event.data.text)
+        showNotification(event.data.color, "WARNING", event.data.text)
         var audioPlayer = null;
 
         if (audioPlayer != null){
@@ -54,8 +54,8 @@ window.addEventListener('message', (event) => {
         audioPlayer.volume(0.3);
         audioPlayer.play();
     }
-    if (event.data.type === 'error') {
-        showNotification("#FF0000", "FAILURE", event.data.text)
+    if (event.data.type === 'failure') {
+        showNotification(event.data.color, "FAILURE", event.data.text)
         var audioPlayer = null;
 
         if (audioPlayer != null){
@@ -67,7 +67,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.play();
     }
     if (event.data.type === 'info') {
-        showNotification("#0000FF", "INFORMATION",event.data.text)
+        showNotification(event.data.color, "INFORMATION",event.data.text)
         var audioPlayer = null;
 
         if (audioPlayer != null){
@@ -79,7 +79,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.play();
     }
     if (event.data.type === 'success') {
-        showNotification("#00FF00", "SUCCESS",event.data.text)
+        showNotification(event.data.color, "SUCCESS",event.data.text)
         var audioPlayer = null;
 
         if (audioPlayer != null){
