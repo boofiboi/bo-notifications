@@ -11,11 +11,11 @@ This script is not yet ready for deployment on any server, but you can test it o
 3. Edit the config according to your tastes.
 4. Edit any script that uses any notification service (QB, ESX) and replace any mention of a notify event with this:
 
-- Server: `TriggerClientEvent('bo-notifications:notify', "info", "You have been healed!", "Chord.mp3")`
-- Client: `TriggerEvent('bo-notifications:notify', "info", "You have been healed!", "Chord.mp3")`
+- Server: `TriggerClientEvent('bo-notifications:notify', "info", "You have been healed!")`
+- Client: `TriggerEvent('bo-notifications:notify', "info", "You have been healed!")`
 
 You can also use an export:
-`exports["bo-notifications"]:Notify("info", "You have been healed!", "Chord.mp3")`
+`exports["bo-notifications"]:Notify("info", "You have been healed!")`
 
 ### Supported notification types:
 - `warn` - Is yellow, used for warning the player about e.g dangers, 
@@ -36,6 +36,6 @@ You can also use an export:
 - [ ] GUI for configuring the script (Probably wont do?)
 - [ ] Custom sounds made by me (I don't know how though.)
 - [x] User friendly tutorial on how to use this script
-- [ ] ~~Automatic replacement of qb-notify and esx-notify? (Not sure if possible to overwrite already created events.)~~ Impossible to do.
+- [ ] ~~Automatic replacement of qb-notify and esx-notify?~~ Impossible to do.
 - [ ] Fully finish the script
 - [ ] Proper MatV3 design?
