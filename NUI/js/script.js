@@ -28,8 +28,11 @@ function showNotification(color, title, message) {
 
     // Automatically remove the notification after 5 seconds
     setTimeout(() => {
-        container.removeChild(notification);
-    }, 30000000);
+        notification.classList.add('slide-out');
+        notification.addEventListener('animationend', () => {
+            container.removeChild(notification);
+        });
+    }, 5000);
 }
 
 // Example usage
@@ -47,7 +50,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.pause();
         }
 
-        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound + ".mp3"]});
+        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound]});
         audioPlayer.volume(0.3);
         audioPlayer.play();
     }
@@ -59,7 +62,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.pause();
         }
 
-        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound + ".mp3"]});
+        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound]});
         audioPlayer.volume(0.3);
         audioPlayer.play();
     }
@@ -71,7 +74,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.pause();
         }
 
-        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound + ".mp3"]});
+        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound]});
         audioPlayer.volume(0.3);
         audioPlayer.play();
     }
@@ -83,7 +86,7 @@ window.addEventListener('message', (event) => {
         audioPlayer.pause();
         }
 
-        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound + ".mp3"]});
+        audioPlayer = new Howl({src: ["./sounds/" + event.data.sound]});
         audioPlayer.volume(0.3);
         audioPlayer.play();
     }

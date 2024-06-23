@@ -1,7 +1,6 @@
 
 /* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 #notification-container {
     position: fixed;
     top: 20px;
@@ -17,12 +16,11 @@
     text-align:center;
     display:block;
     color:#9d99a5;
-    font-family: "Roboto", sans-serif;
+    font-family: "Rubik", sans-serif;
   font-weight: 500;
-  font-size:14px;
+  font-size:17px;
 margin-top:10px;
   font-style: normal;
-    margin: 0;
     padding: 3px 3px 0px 3px;
 }
 
@@ -38,7 +36,7 @@ margin-top:10px;
 .notification a {
     color:#9d99a5;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
+    font-family: "Rubik", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size:17px;
@@ -51,10 +49,10 @@ margin-top:10px;
     border: 1px solid #79747E;
     margin-bottom: 10px;
     border-radius: 5px;
-    animation: fadeIn 0.3s cubic-bezier(0.020, -0.150, 0.000, 1.650);;
+    animation: slideInRight 0.3s cubic-bezier(0.020, -0.150, 0.000, 1.650);;
 }
 
-@keyframes fadeIn {
+@keyframes slideInRight {
     from {
         transform: translateX(100%);
         opacity: 0;
@@ -63,4 +61,19 @@ margin-top:10px;
         transform: translateX(0);
         opacity: 1;
     }
+}
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+.notification.slide-out {
+    animation: slideOutRight 0.3s cubic-bezier(0.020, -0.150, 0.000, 1.650);
 }
