@@ -1,0 +1,66 @@
+
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+}
+
+
+.notification h1 {
+    white-space: nowrap;  /* Prevents text from wrapping */
+    overflow: hidden;     /* Ensures that overflow text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflowing text */
+    text-align:center;
+    display:block;
+    color:#9d99a5;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size:14px;
+margin-top:10px;
+  font-style: normal;
+    margin: 0;
+    padding: 3px 3px 0px 3px;
+}
+
+.notification hr {
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid transparent; /* Transparent border at the bottom */
+    border-radius: 10px; /* Rounded corners at the bottom */
+}
+
+.notification a {
+    color:#9d99a5;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size:17px;
+  padding: 0px 6px 6px 6px;
+  text-align:center;
+  display:block;
+}
+.notification {
+    background-color: #1D1B20;
+    border: 1px solid #79747E;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    animation: fadeIn 0.3s cubic-bezier(0.020, -0.150, 0.000, 1.650);;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

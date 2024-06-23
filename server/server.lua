@@ -2,6 +2,7 @@
 
 -- Update checking done very easily!!
 
+--[[
 
 PerformHttpRequest('https://raw.githubusercontent.com/boofiboi/FiveM-Discord-Presence/main/VERSION', function(Error, OnlineVersion, Header)
     OfflineVersion = LoadResourceFile('FiveM-Discord-Presence', 'VERSION')
@@ -12,4 +13,6 @@ PerformHttpRequest('https://raw.githubusercontent.com/boofiboi/FiveM-Discord-Pre
         print('^3 [DEBUG]: \x1b[97m There is a new version of this script available, please update ASAP. \x1b[0m')
     end
 end)
+--]]
+
 
