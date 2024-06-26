@@ -37,5 +37,5 @@ You can also use an export:
 - [ ] Custom sounds made by me (I don't know how though.)
 - [x] User friendly tutorial on how to use this script
 - [ ] ~~Automatic replacement of qb-notify and esx-notify?~~ Impossible to do.
-- [ ] Fully finish the script
-- [ ] Proper MatV3 design?
+- [x] Fully finish the script
+- [ ] ~~Proper MatV3 design? ~~ Google's documentation on MatV3 is stupidly nowhere to be seen.
