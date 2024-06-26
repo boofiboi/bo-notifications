@@ -13,28 +13,28 @@ function Notify(notiftype, text)
         SendNUIMessage({
             type = notiftype,
             text = text,
-            sound = Config.WarnSound
+            sound = Config.WarnSound,
             color = Config.WarnColor
             })
     elseif notifType == info then
         SendNUIMessage({
             type = notiftype,
             text = text,
-            sound = Config.InfoSound
+            sound = Config.InfoSound,
             color = Config.InfoColor
             })
     elseif notifType == success then
         SendNUIMessage({
             type = notiftype,
             text = text,
-            sound = Config.SuccessSound
+            sound = Config.SuccessSound,
             color = Config.SuccessColor
             })
     elseif notifType == failure then
         SendNUIMessage({
             type = notiftype,
             text = text,
-            sound = Config.FailureColor
+            sound = Config.FailureColor,
             color = Config.FailureSound
             })
     end
