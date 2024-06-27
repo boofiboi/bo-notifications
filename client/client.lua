@@ -1,41 +1,46 @@
-exports('Notify', Notify())
+exports('Notify', "Notify()")
 RegisterCommand("notif", function(source, args, rawCommand)
-TriggerEvent('bo-notifications:notify', args[1], args[2])
+Notify(args[1], args[2])
 end, false)
 
 
 RegisterNetEvent("bo-notifications:notify")
-AddEventHandler("bo-notifications:notify", Notify())
-
-
+AddEventHandler("bo-notifications:notify", function(eventParam1, eventParam2)
+    Notify(eventparam1, eventParam2);
+end)
 function Notify(notiftype, text)
-    if notifType == warn then
+    print(notiftype)
+    print(text)
+    if notiftype == "warn" then
         SendNUIMessage({
             type = notiftype,
             text = text,
             sound = Config.WarnSound,
             color = Config.WarnColor
             })
-    elseif notifType == info then
+        end
+    if notiftype == "info" then
         SendNUIMessage({
             type = notiftype,
             text = text,
             sound = Config.InfoSound,
             color = Config.InfoColor
             })
-    elseif notifType == success then
+        end
+    if notiftype == "success" then
         SendNUIMessage({
             type = notiftype,
             text = text,
             sound = Config.SuccessSound,
             color = Config.SuccessColor
             })
-    elseif notifType == failure then
+        end
+    if notiftype == "failure" then
         SendNUIMessage({
             type = notiftype,
             text = text,
-            sound = Config.FailureColor,
-            color = Config.FailureSound
+            sound = Config.FailureSound,
+            color = Config.FailureColor
             })
+        end
     end
-end

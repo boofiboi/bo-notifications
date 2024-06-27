@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'boofiboi'
 description '"Configurable" notification script for FiveM'
-version '1.0'
+version '1.1'
 
 
 ui_page 'NUI/index.html'

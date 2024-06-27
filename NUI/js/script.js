@@ -35,11 +35,6 @@ function showNotification(color, title, message) {
     }, 5000);
 }
 
-// Example usage
-document.addEventListener('DOMContentLoaded', () => {
-    // Display a notification when the page loads
-    showNotification('#0000FF','bo-notifications','bo-notifications has loaded succesfully.');
-});
 
 window.addEventListener('message', (event) => {
     if (event.data.type === 'warn') {
