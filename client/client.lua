@@ -9,8 +9,6 @@ AddEventHandler("bo-notifications:notify", function(eventParam1, eventParam2)
     Notify(eventparam1, eventParam2);
 end)
 function Notify(notiftype, text)
-    print(notiftype)
-    print(text)
     if notiftype == "warn" then
         SendNUIMessage({
             type = notiftype,
