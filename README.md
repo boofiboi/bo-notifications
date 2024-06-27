@@ -8,17 +8,17 @@
 3. Edit the config according to your tastes.
 4. Edit any script that uses any notification service (QB, ESX) and replace any mention of a notify event with this:
 
-- Server: `TriggerClientEvent('bo-notifications:notify', "info", "You have been healed!")`
-- Client: `TriggerEvent('bo-notifications:notify', "info", "You have been healed!")`
+- Server: `TriggerClientEvent('bo-notifications:notify', "NOTIFTYPE", "ACTUALTEXT")`
+- Client: `TriggerEvent('bo-notifications:notify', "NOTIFTYPE", "ACTUALTEXT")`
 
 You can also use an export:
-`exports["bo-notifications"]:Notify("info", "You have been healed!")`
+`exports["bo-notifications"]:Notify("NOTIFTYPE", "ACTUALTEXT")`
 
 ### Supported notification types:
-- `warn` - Is yellow, used for warning the player about e.g dangers, 
+- `warn` -Used for warning the player about e.g dangers, 
 - `info` - Used for informing the player about useful info.
-- `success` - Is green, signifies success of a task
-- `failure` - Is red, signifies failure of a task
+- `success` - Signifies success of a task
+- `failure` - Signifies failure of a task
 
 
 # Adding sounds:
