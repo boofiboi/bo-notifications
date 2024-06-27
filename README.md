@@ -1,9 +1,6 @@
 # **bo-notifications**
 "Customizable" notification script for your FiveM server, that's fully open source and modifiable
 
-This script is not yet ready for deployment on any server, but you can test it out.
-
-
 # Usage:
 
 1. Download/clone this repository into your resources folder
@@ -38,4 +35,4 @@ You can also use an export:
 - [x] User friendly tutorial on how to use this script
 - [ ] ~~Automatic replacement of qb-notify and esx-notify?~~ Impossible to do.
 - [x] Fully finish the script
-- [ ] ~~Proper MatV3 design? ~~ Google's documentation on MatV3 is stupidly nowhere to be seen.
+- [ ] ~~Proper MatV3 design?~~ Google's documentation on MatV3 is stupidly nowhere to be seen.
